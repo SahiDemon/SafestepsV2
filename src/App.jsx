@@ -10,21 +10,20 @@ import {
   SignInButton,
   UserButton,
 } from "@clerk/clerk-react";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <Navbar />
       <CssBaseline />
+
       <Container
         maxWidth={false}
         sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
-        <Dashboard />
-        <SignedOut>
-          <SignInButton />
-        </SignedOut>
         <SignedIn>
-          <UserButton />
+          <Dashboard />
         </SignedIn>
       </Container>
     </ThemeProvider>
